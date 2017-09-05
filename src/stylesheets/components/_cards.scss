@@ -1,0 +1,98 @@
+.cards {
+  overflow: hidden;
+  margin-top: -2em;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter;
+  }
+
+  @include media('>desktop') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.card {
+  $content-padding: 2em;
+  $content-margin: 2em;
+
+  margin-top: $content-margin;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    height: 10rem;
+
+    img {
+      width: 100%;
+      display: block;
+      position: absolute;
+    }
+  }
+
+  @include media('>=500px') {
+    flex-direction: row;
+    flex-basis: 49%;
+
+    &__image {
+      min-width: 10rem;
+      max-width: 10rem;
+      height: auto;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    padding: $content-padding;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__header, &__desc {
+    margin-bottom: 1em;
+  }
+
+  &__header {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__title {
+    color: $c-dark;
+    font-size: 1.5em;
+  }
+
+  &__list {
+    color: #aaa;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-top: .5em;
+    display: flex;
+
+    li {
+      display: block;
+
+      &:not(:last-of-type)::after {
+        content: '\2022';
+        margin: 0 .5em;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: .9em;
+  }
+}

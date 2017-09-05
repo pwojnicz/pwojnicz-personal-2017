@@ -1,0 +1,54 @@
+//- VARIABLES
+- var github = 'https://github.com/pwojnicz';
+- var dribbble = 'https://dribbble.com/Tabakowy';
+- var codepen = 'https://codepen.io/tabakowy/';
+
+doctype html
+html(lang="pl")
+  
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge, chrome=1")
+    meta(name="viewport", content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0")
+    title Paweł Wojnicz – front-end developer personal portfolio
+    meta(name='description', content='Nowoczesne, responsywne strony internetowe - planowanie, projektowanie oraz realizacja.')
+    meta(name='keywords', content="html5, css3, rwd, webdesign, 'ux design', 'front-end developer', portfolio, projektowanie, kodowanie, 'tworzenie stron www', internetowych, responsywne, freelancer, wordpress, opencart, cms")
+    link(rel='author', href='humans.txt')
+      
+    link(rel="shortcut icon", type="image/x-icon", href="assets/img/favicon.ico")
+      
+    // Schema.org markup
+    meta(itemprop="name", content="Paweł Wojnicz – front-end developer personal portfolio")
+    meta(itemprop="description", content="Nowoczesne, responsywne strony internetowe - planowanie, projektowanie oraz realizacja.")
+    meta(itemprop="image", content="assets/img/og-image.jpg")
+
+    // Open Graph markup
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="Paweł Wojnicz – front-end developer personal portfolio")
+    meta(property="og:image", content="assets/img/og-image.jpg")
+    meta(property="og:image:height", content="387")
+    meta(property="og:image:width", content="740")
+    meta(property="og:description", content="Nowoczesne, responsywne strony internetowe - planowanie, projektowanie oraz realizacja.")
+    meta(property="og:site_name", content="Paweł Wojnicz – front-end developer personal portfolio")
+    meta(property="og:url", content="https://pwojnicz.pl/")
+    
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Roboto:100,400", rel="stylesheet")
+    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+    link(rel="stylesheet", href="assets/css/main.min.css")
+
+  body#start
+
+    include sections/header
+    include sections/featured
+    include sections/skills
+    include sections/portfolio
+    include sections/about
+    include sections/footer
+    
+    script(
+      src="https://code.jquery.com/jquery-3.2.1.min.js", 
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", 
+      crossorigin="anonymous"
+    )
+    script(src="assets/js/main.min.js")
+    

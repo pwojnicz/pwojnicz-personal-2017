@@ -1,0 +1,35 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-1;
+}
+
+nav {
+  font-family: $font-1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-featured {
+  font-size: 1.5em;
+  font-weight: lighter;
+  text-align: center;
+  padding: 2em;
+}
+
+.u-list {
+  &__item {
+    margin: .5em 3em .5em 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 1em;
+      height: 2px;
+      background: $c-primary;
+      position: absolute;
+      left: -1.75em;
+      top: .75em;
+    }
+  }
+}

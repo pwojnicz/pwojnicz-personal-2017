@@ -1,0 +1,43 @@
+//- BEGIN CARD MIXIN
+//- ===
+mixin card(title, list, path, online)
+  - var zoom = 'https://pwojnicz.pl/projects/' + path + '/full.png'
+  article.card
+    .card__image
+      img(src="projects/" + path + "/thumb.png", alt=title)
+        
+    .card__content
+      header.card__header
+        h2.card__title=title
+        ul.card__list
+          each item in list
+            li=item
+    
+      .card__desc
+        block
+      
+      footer.card__footer
+        a(href=zoom, title="Zobacz projekt", target="_blank").btn.btn--primary.btn--small #[i.fa.fa-search-plus] img
+        if(online)
+          a(href=online, title=title, rel="external", target="_blank").btn.btn--primary.btn--small #[i.fa.fa-external-link] online
+        
+//- ===
+//- END CARD MIXIN
+
+section#portfolio.section.section--light: .container
+  
+  header.section__header
+    h1.section__title Wybrane projekty i realizacje
+    p.section__desc czyli nad czym pracowałem dotychczas
+    
+  .cards
+    +card("Restauracje z rabatem", ["Front-end", "Wdrożenie do CMS"], "restauracjezrabatem", "http://restauracjezrabatem.pl/")
+      | Moim zadaniem było zakodowanie projektu graficznego oraz integracja kodu z systemem CMS serwisu (php). 
+    +card("pwojnicz.pl \'16", ["Design", "Front-end"], "pwojnicz-2016", "https://pwojnicz.pl/online/pwojnicz-2016")
+      | Poprzednia wersja portfolio.
+    +card("Nowy Styl Polska", ["Design", "Front-end"], "nowystylpolska", "https://pwojnicz.pl/online/nowystylpolska")
+      | Zakres prac obejmował projekt i kodowanie strony dla ukraińskiego producenta drzwi wewnętrznych.
+    +card("Kawiarnia ZSZiP w Krościenku n.D", ["Design", "Front-end"], "zszip", "https://pwojnicz.pl/online/zszip")
+      | Projekt i wdrożenie responsywnej strony www dla restauracji i kawiarnni klasycznej w Krościenku n.D.
+  
+  .text-featured Zajrzyj także na mój profil #[a(href=github) Github], #[a(href=dribbble) Dribbble] oraz #[a(href=codepen) Codepen].

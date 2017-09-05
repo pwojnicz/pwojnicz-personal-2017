@@ -1,0 +1,52 @@
+body {
+  color: #828282;
+  font-size: 13px;
+  font-family: $font-2;
+  line-height: 1.75;
+
+  @include media('>=tablet') {
+    font-size: 16px;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: $c-action;
+}
+
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+a {
+  color: #2F80ED;
+
+  &:not([class]) {
+    backface-visibility: hidden;
+  	position: relative;
+    transition: 0.1s color ease;
+
+    &:after {
+      content: "";
+      transition: 0.5s all ease;
+      backface-visibility: hidden;
+      position: absolute;
+      bottom: -0.15em;
+      left: 0;
+      height: .1em;
+      width: 0;
+      background: $c-primary;
+    }
+
+    &:hover {
+      color: $c-primary;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.buttons {
+  background: pink;
+  display: block;
+}
+
+.btn {
+  font-size: .6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $c-light;
+  border-radius: 0px 0px 1rem 0px;
+  padding: 1.5em 2em;
+  display: inline-block;
+  //overflow: hidden;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background: darken($c-light, 5%);
+  }
+
+  @include media('>=tablet') {
+    font-size: .8rem;
+  }
+
+  &:hover {
+    border-radius: 0;
+  }
+
+  &:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  &--primary {
+    color: #fff;
+    background: $c-action;
+
+    &:hover {
+      background: lighten($c-action, 5%);
+    }
+  }
+
+  &--dark {
+    @extend .btn--primary;
+    background: $c-dark;
+
+    &:hover {
+      background: lighten($c-dark, 5%);
+    }
+  }
+
+  &--small {
+    font: 1em;
+    padding: .5em 1.5em;
+  }
+}

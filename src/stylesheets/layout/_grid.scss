@@ -1,0 +1,30 @@
+.container {
+  margin: auto;
+  max-width: 1400px;
+  padding: 1em;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include media('<tablet') {
+    .flex__container:not(:last-of-type) {
+      margin-bottom: $gutter;
+    }
+  }
+
+  @include media('>=tablet') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--2 .flex__container {
+      flex-basis: 45%;
+    }
+
+    &--3 .flex__container {
+      flex-basis: 30%;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+
+
+//
+// main section
+//
+
+.section {
+  color: #828282;
+  padding: $gutter 0;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 5em;
+
+    &--left {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    color: #545454;
+    font-size: 2.2em;
+    font-weight: normal;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__desc {
+    color: #878BAF;
+    font-size: 1.5em;
+    font-weight: lighter;
+  }
+
+  &--dark {
+    color: $c-dark-text-2;
+    background: $c-darker url('/assets/img/stardust.png');
+
+    .section__title, .featured-section__title {
+      color: #fff;
+    }
+  }
+
+  &--light {
+    background: $c-light;
+  }
+
+}
+
+
+//
+// Featured section / Intro
+//
+
+.featured-section {
+  padding: 8em 0 4rem 0;
+
+  &__container {
+    text-align: center;
+    z-index: 1;
+  }
+
+  &__img,
+  &__title,
+  &__desc {
+    margin-bottom: 2.5rem;
+  }
+
+  &__img-item {
+    width: 15rem;
+  }
+
+  &__label {
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 1.9em;
+    font-weight: bolder;
+    line-height: 1.5;
+  }
+
+  &__desc {
+    font-size: 1.4em;
+    font-weight: lighter;
+  }
+
+  @include media('>=tablet') {
+    &__container {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
+
+  @include media('>=desktop') {
+    // $header-padding-left: 2.5rem;
+
+    // &__label {
+    //   transform: rotate(-90deg) translate(50%, -310%);
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    // }
+
+    &__title {
+      font-size: 3rem;
+      // padding-left: $header-padding-left;
+    }
+
+    // &__desc {
+    //   border-left: 1px solid $c-dark;
+    //   padding-left: $header-padding-left;
+    // }
+  }
+}
