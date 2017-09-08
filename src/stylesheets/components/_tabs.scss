@@ -99,11 +99,14 @@
         color: $c-primary-text-2;
       }
 
+      @keyframes display-content {
+        from { transform: translateY(10%); }
+        to { transform: translateY(0); }
+      }
+
       & + .tab-content {
-        position: static;
-        opacity: 1;
-        z-index: 0;
-        transform: translateY(0);
+        display: flex;
+        animation: display-content .5s;
       }
     }
   }
@@ -112,13 +115,8 @@
     color: #777;
     background: #fff;
     padding: 4em;
-    overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
-    z-index: -1;
-    position: absolute;
-    transition: all .3s ease-in;
-    transform: translateY(1rem);
 
     &__section:not(:last-of-type) {
       margin-bottom: 2em;
@@ -128,7 +126,6 @@
       color: #000;
     }
   }
-
 }
 
 @include media('>=1150px') {
@@ -157,11 +154,11 @@
 
       &__section {
         max-width: 50%;
+
         &:not(:last-of-type) {
           margin-bottom: 0;
         }
       }
     }
   }
-
 }
