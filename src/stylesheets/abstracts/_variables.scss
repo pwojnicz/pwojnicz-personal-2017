@@ -1,23 +1,29 @@
+/*
+  -----------------
+  --- Variables ---
+  -----------------
+*/
 
+// Layout
+$gutter: 4em;
 
-
+// Fonts
 $font-1: 'Open Sans', sans-serif;
 $font-2: 'Roboto', sans-serif;
 
-$c-primary: #F2C94C;
+// Colours - text
 $c-primary-text-1: #655116;
 $c-primary-text-2: #7C6B36;
-
-$c-action: #009688;
-$c-hover: #F2C94C;
-$c-alert: #DA1251;
-$c-secondary: #453D3F;
-
-$c-light: #F4F8FD;
-
-$c-dark: #2C2D3C;
-$c-darker: #1C1D28;
 $c-dark-text-1: #fff;
 $c-dark-text-2: #B7BAD5;
 
-$gutter: 4em;
+// Colours - actions
+$c-primary: #F2C94C;
+$c-action: #009688;
+$c-hover: #F2C94C;
+$c-alert: #DA1251;
+
+// Colours - background
+$c-light: #F4F8FD;
+$c-dark: #2C2D3C;
+$c-darker: #1C1D28;

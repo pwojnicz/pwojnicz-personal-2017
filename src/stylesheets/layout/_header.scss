@@ -1,5 +1,10 @@
+/*
+  --------------
+  --- Header ---
+  --------------
+*/
+
 .main-header {
-  position: absolute;
   padding: 1rem 3rem;
   min-height: 6rem;
   width: 100%;
@@ -7,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
 
   &__title {
     color: $c-primary;

@@ -1,3 +1,9 @@
+/*
+  -------------
+  --- Cards ---
+  -------------
+*/
+
 .cards {
   overflow: hidden;
   margin-top: -2em;
@@ -21,7 +27,6 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-
 
   &__image {
     overflow: hidden;
@@ -61,7 +66,8 @@
     margin-top: auto;
   }
 
-  &__header, &__desc {
+  &__header,
+  &__desc {
     margin-bottom: 1em;
   }
 

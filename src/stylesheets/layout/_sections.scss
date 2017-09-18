@@ -1,9 +1,10 @@
+/*
+  ----------------
+  --- Sections ---
+  ----------------
+*/
 
-
-//
-// main section
-//
-
+// Main section
 .section {
   color: #828282;
   padding: $gutter 0;
@@ -37,7 +38,8 @@
     color: $c-dark-text-2;
     background: $c-darker url('/assets/img/stardust.png');
 
-    .section__title, .featured-section__title {
+    .section__title,
+    .featured-section__title {
       color: #fff;
     }
   }
@@ -45,14 +47,9 @@
   &--light {
     background: $c-light;
   }
-
 }
 
-
-//
 // Featured section / Intro
-//
-
 .featured-section {
   padding: 8em 0 4rem 0;
 
@@ -95,23 +92,8 @@
   }
 
   @include media('>=desktop') {
-    // $header-padding-left: 2.5rem;
-
-    // &__label {
-    //   transform: rotate(-90deg) translate(50%, -310%);
-    //   position: absolute;
-    //   left: 0;
-    //   bottom: 0;
-    // }
-
     &__title {
       font-size: 3rem;
-      // padding-left: $header-padding-left;
     }
-
-    // &__desc {
-    //   border-left: 1px solid $c-dark;
-    //   padding-left: $header-padding-left;
-    // }
   }
 }

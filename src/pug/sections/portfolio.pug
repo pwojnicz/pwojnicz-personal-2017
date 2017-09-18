@@ -17,15 +17,14 @@ mixin card(title, list, path, online)
         block
       
       footer.card__footer
-        a(href=zoom, title="Zobacz projekt", target="_blank").btn.btn--primary.btn--small #[i.fa.fa-search-plus] img
+        //- a(href=zoom, title="Zobacz projekt").btn.btn--primary.btn--small #[i.fa.fa-search-plus] img
         if(online)
-          a(href=online, title=title, rel="external", target="_blank").btn.btn--primary.btn--small #[i.fa.fa-external-link] online
+          a(href=online, title=title).btn.btn--primary.btn--small #[i.fa.fa-external-link] online
         
 //- ===
 //- END CARD MIXIN
 
 section#portfolio.section.section--light: .container
-  
   header.section__header
     h1.section__title Wybrane projekty i realizacje
     p.section__desc czyli nad czym pracowałem dotychczas

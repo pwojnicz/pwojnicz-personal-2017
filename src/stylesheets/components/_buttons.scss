@@ -1,3 +1,9 @@
+/*
+  ---------------
+  --- Buttons ---
+  ---------------
+*/
+
 .buttons {
   background: pink;
   display: block;
@@ -11,7 +17,6 @@
   border-radius: 0px 0px 1rem 0px;
   padding: 1.5em 2em;
   display: inline-block;
-  //overflow: hidden;
   transition: all .2s ease-in-out;
 
   &:hover {
@@ -49,7 +54,7 @@
   }
 
   &--small {
-    font: 1em;
+    font-size: .7rem;
     padding: .5em 1.5em;
   }
 }

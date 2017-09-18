@@ -8,7 +8,7 @@ var paths = {
   src: {
     css: path_base + 'src/stylesheets/',
     js: path_base + 'src/js/',
-    img: path_base + 'assets/img/',
+    img: path_base + 'dist/assets/img/',
     pug: path_base + 'src/pug/'
   },
 
