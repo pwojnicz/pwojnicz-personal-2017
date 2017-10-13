@@ -4,10 +4,17 @@ $(document).ready(function() {
 });
 
 function toggleNav() {
-  $('.main-header__nav-trigger').click(function() {
-    $('.main-header__nav').toggleClass('is-active');
+  $('.main-nav__trigger').click(function() {
+    $('.main-nav').toggleClass('is-active');
     return false;
   });
+
+  if ('.main-nav.is-active') {
+    $('.main-nav__item').click(function() {
+      $('.main-nav').toggleClass('is-active');
+      return false;
+    });
+  }
 }
 
 function tabs() {

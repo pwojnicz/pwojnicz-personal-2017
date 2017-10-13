@@ -1,10 +1,10 @@
 //- BEGIN CARD MIXIN
 //- ===
 mixin card(title, list, path, online)
-  - var zoom = 'https://pwojnicz.pl/projects/' + path + '/full.png'
+  //- var zoom = 'https://pwojnicz.pl/assets/img/projects/' + path + '/full.png'
   article.card
     .card__image
-      img(src="projects/" + path + "/thumb.png", alt=title)
+      img(src="assets/img/projects/" + path + "/thumb.png", alt=title)
         
     .card__content
       header.card__header
