@@ -8,7 +8,7 @@ var paths = {
   src: {
     css: path_base + 'src/stylesheets/',
     js: path_base + 'src/js/',
-    img: path_base + 'dist/assets/img/',
+    img: path_base + 'src/img/',
     pug: path_base + 'src/pug/'
   },
 
@@ -76,17 +76,12 @@ gulp.task('watch', function() {
     .on('change', browserSync.reload);
 });
 
-// just default task
-gulp.task('default', ['sync', 'styles', 'scripts', 'watch']);
-
-
-// ----------------------------------------------------------------------------
-// 3. MORE TASKS
-// ----------------------------------------------------------------------------
-
 // minify images
 gulp.task('images', function(){
-  return gulp.src(paths.src.img + '**/*.+(png|jpg|gif|svg)')
+  return gulp.src(paths.src.img + '**/*.+(png|jpg|gif|svg|ico)')
     .pipe(plugins.imagemin())
     .pipe(gulp.dest(paths.dest.img))
 });
+
+// just default task
+gulp.task('default', ['sync', 'styles', 'scripts', 'watch', 'images']);
