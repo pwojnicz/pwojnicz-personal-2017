@@ -4,13 +4,15 @@
   -------------------
 */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 1
+}
+
 body {
   color: #828282;
-  font: 13px/1.75 $font-2;
-
-  @include media('>=tablet') {
-    font-size: 16px;
-  }
+  font: 1rem/1.75 $font-2;
 }
 
 ::selection {

@@ -13,7 +13,8 @@
 .tab {
   &-header {
     background: lighten($c-darker, 2%);
-    padding: 2em;
+    box-shadow: $box-shadow;
+    padding: 2rem;
     display: block;
     position: relative;
     transition: all .2s ease-in;
@@ -50,10 +51,9 @@
 
     &__label {
       color: #fff;
-      font-size: .8em;
+      font-size: .8rem;
       background: $c-dark;
-      padding: .2em 1em;
-      display: block;
+      padding: .2rem 1rem;
       position: absolute;
       top: 0;
       right: 0;
@@ -120,7 +120,8 @@
   &-content {
     color: #777;
     background: #fff;
-    padding: 4em;
+    box-shadow: $box-shadow;
+    padding: 4rem;
     display: none;
     flex-direction: column;
 
@@ -144,11 +145,11 @@
 
   .tab {
     &-header {
-      flex: 2 0px;
-      margin-bottom: 1em;
+      flex: 2 0;
+      margin-bottom: 1rem;
 
       &:not(:first-of-type) {
-        margin-left: 1em;
+        margin-left: 1rem;
       }
     }
 

@@ -5,8 +5,8 @@
 */
 
 .main-header {
-  padding: 1em 3em;
-  min-height: 6rem;
+  padding: 2rem;
+  min-height: 7rem;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -16,7 +16,7 @@
 
   &__title {
     color: $c-primary;
-    font: bold 1.1em $font-1;
+    font: bolder 1.1rem $font-1;
   }
 }
 
@@ -28,8 +28,8 @@
       text-align: center;
       background: $c-action;
       border-radius: 50%;
-      width: 3em;
-      height: 3em;
+      width: 3rem;
+      height: 3rem;
       display: block;
       transition: all .5s;
       position: relative;
@@ -39,6 +39,9 @@
     &.is-active &__trigger {
       background: $c-primary;
       border-radius: 0;
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
     }
 
     &__icon {
@@ -87,10 +90,14 @@
     }
 
     &__items {
-      text-align: center;
-      background: #fff;
-      padding: 7em;
       opacity: 0;
+      background: #fff;
+      height: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
       position: fixed;
       top: 0;
       left: 0;
@@ -98,19 +105,17 @@
       visibility: hidden;
       transition: all .3s;
       z-index: 2;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     &.is-active &__items {
-      opacity: .99;
+      opacity: 1;
       visibility: visible;
-      box-shadow: 0rem 2rem 5rem rgba(0,0,0,.2);
     }
 
     &__item {
-      font-size: 1.5em;
-      padding: .5em;
-      position: relative;
+      font-size: 1.5rem;
+      padding: .5rem;
       z-index: 2;
     }
   } // mobile styles
@@ -122,12 +127,12 @@
     }
 
     &__item {
-      padding: 1em 0;
+      padding: 1rem 0;
 
       a {
         color: #fff;
-        padding: .2em;
-        margin: 0 2em;
+        padding: .2rem;
+        margin: 0 2rem;
       }
 
       &--contact {
@@ -135,7 +140,7 @@
 
         a {
           color: $c-action;
-          font: bold 1.1em $font-2;
+          font: bolder 1.1em $font-2;
           border-bottom: 5px solid;
           margin-right: 0;
           transition: color, padding-bottom .2s ease-in;
