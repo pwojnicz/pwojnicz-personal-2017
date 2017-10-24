@@ -1,7 +1,6 @@
 //- BEGIN CARD MIXIN
 //- ===
 mixin card(title, list, path, online)
-  //- var zoom = 'https://pwojnicz.pl/assets/img/projects/' + path + '/full.png'
   article.card
     .card__image
       img(src="assets/img/projects/" + path + "/thumb.png", alt=title)
@@ -13,13 +12,10 @@ mixin card(title, list, path, online)
           each item in list
             li=item
     
-      .card__desc
-        block
+      .card__desc: block
       
       footer.card__footer
-        //- a(href=zoom, title="Zobacz projekt").btn.btn--primary.btn--small #[i.fa.fa-search-plus] img
-        if(online)
-          a(href=online, title=title).btn.btn--primary.btn--small #[i.fa.fa-external-link] online
+        a(href=online, title=title).btn.btn--primary.btn--small #[i.fa.fa-external-link] online
         
 //- ===
 //- END CARD MIXIN
