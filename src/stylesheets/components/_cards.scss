@@ -4,9 +4,11 @@
   -------------
 */
 
+$card-padding: 2rem;
+$card-margin: 2rem;
+
 .cards {
-  //overflow: hidden;
-  margin-top: -2em;
+  margin-bottom: -$card-margin;
 
   &:not(:last-child) {
     margin-bottom: $gutter;
@@ -20,10 +22,7 @@
 }
 
 .card {
-  $content-padding: 2em;
-  $content-margin: 2em;
-
-  margin-top: $content-margin;
+  margin-bottom: $card-margin;
   background: #fff;
   box-shadow: $box-shadow;
   display: flex;
@@ -58,49 +57,45 @@
   }
 
   &__content {
-    padding: $content-padding;
+    padding: $card-padding;
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
   }
 
-  &__footer {
-    margin-top: auto;
-  }
-
   &__header,
   &__desc {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 
   &__header {
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
+  }
+
+  &__desc {
+    font-size: .9rem;
   }
 
   &__title {
     color: $c-dark;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   &__list {
     color: #aaa;
-    font-size: .8em;
+    font-size: .7rem;
     text-transform: uppercase;
-    margin-top: .5em;
+    margin-top: .5rem;
     display: flex;
 
-    li {
-      display: block;
-
-      &:not(:last-of-type)::after {
-        content: '\2022';
-        margin: 0 .5em;
-      }
+    li:not(:last-of-type)::after {
+      content: '\2022';
+      margin: 0 .5rem;
     }
   }
 
-  &__desc {
-    font-size: .9em;
+  &__footer {
+    margin-top: auto;
   }
 }

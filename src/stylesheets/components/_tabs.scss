@@ -40,11 +40,12 @@
 
     &__title {
       color: #fff;
-      font: bold 1.2em $font-2;
+      font: bold 1rem $font-2;
       text-transform: uppercase;
     }
 
     &__desc {
+      font-size: .9rem;
       text-align: center;
       color: $c-dark-text-2;
     }
@@ -64,7 +65,7 @@
     }
 
     @keyframes text-fade {
-      0% { opacity: 1; }
+      0% { opacity: 0; }
       50% { opacity: 0; transform: translateY(10%); }
       100% { opacity: 1; transform: translateY(0); }
     }
@@ -106,13 +107,18 @@
       }
 
       @keyframes display-content {
-        from { transform: translateY(10%); }
-        to { transform: translateY(0); }
+        from {
+          transform: translateY(10%);
+        }
+
+        to {
+          transform: translateY(0);
+        }
       }
 
       & + .tab-content {
         display: flex;
-        animation: display-content .5s;
+        animation: display-content .5s
       }
     }
   }
@@ -124,6 +130,10 @@
     padding: 4rem;
     display: none;
     flex-direction: column;
+
+    &__section {
+      animation: text-fade .5s;
+    }
 
     &__section:not(:last-of-type) {
       margin-bottom: 2em;

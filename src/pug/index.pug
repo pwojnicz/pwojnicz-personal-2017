@@ -1,19 +1,19 @@
 //- Meta:
-- var url = 'https://pwojnicz.pl/';
-- var title = 'Paweł Wojnicz – front-end developer personal portfolio';
-- var desc = 'Nowoczesne, responsywne strony internetowe - planowanie, projektowanie oraz realizacja.';
+- var url = 'https://pwojnicz.pl/'
+- var title = 'Paweł Wojnicz – front-end developer personal portfolio'
+- var desc = 'Nowoczesne, responsywne strony internetowe - planowanie, projektowanie oraz realizacja.'
 
 //- Social profiles:
-- var github = 'https://github.com/tabakowy';
-- var dribbble = 'https://dribbble.com/tabakowy';
-- var codepen = 'https://codepen.io/tabakowy/';
+- var github = 'https://github.com/tabakowy'
+- var dribbble = 'https://dribbble.com/tabakowy'
+- var codepen = 'https://codepen.io/tabakowy/'
 
 doctype html
 html(lang="pl")
   
   head
     meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=Edge)
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
     meta(name="viewport", content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0")
     title=title
     meta(name='description', content=desc)
@@ -44,16 +44,13 @@ html(lang="pl")
   body#start
 
     include sections/header
-    include sections/featured
+    include sections/hero
     include sections/skills
     include sections/portfolio
     include sections/about
     include sections/footer
     
-    script(
-      src="https://code.jquery.com/jquery-3.2.1.min.js", 
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", 
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", 
-      crossorigin="anonymous"
-    )
+      crossorigin="anonymous")
     script(src="assets/js/main.min.js")
-    

@@ -8,9 +8,11 @@
   text-align: center;
   text-transform: uppercase;
   border-top: 1px solid #F4F8FD;
+  padding: $gutter/2;
 
   &__credits {
     color: #828282;
     font-size: .6em;
+
   }
 }
