@@ -1,3 +1,20 @@
+
+// AOS setup:
+$('.hero-section__header').attr('data-aos', 'zoom-in');
+$('.hero-section__img').attr('data-aos', 'zoom-in');
+$('.hero-section__desc').attr('data-aos', 'fade-up').attr('data-aos-delay', '400');
+$('.hero-section a').attr('data-aos', 'fade-up').attr('data-aos-delay', '800');
+$('.section__header').attr('data-aos', 'fade-in');
+$('.tabs').attr('data-aos', 'fade-up');
+$('.card').attr('data-aos', 'zoom-in');
+
+AOS.init({
+  offset: 100,
+  duration: 600,
+  easing: 'ease',
+  delay: 50,
+});
+
 $(document).ready(function() {
   toggleNav();
   tabs();
