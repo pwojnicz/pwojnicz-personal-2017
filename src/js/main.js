@@ -3,7 +3,7 @@
 $('.hero-section__header').attr('data-aos', 'zoom-in');
 $('.hero-section__img').attr('data-aos', 'zoom-in');
 $('.hero-section__desc').attr('data-aos', 'fade-up').attr('data-aos-delay', '400');
-$('.hero-section a').attr('data-aos', 'fade-up').attr('data-aos-delay', '800');
+$('.hero-section .btn-group').attr('data-aos', 'fade-up').attr('data-aos-delay', '800');
 $('.section__header').attr('data-aos', 'fade-in');
 $('.tabs').attr('data-aos', 'fade-up');
 $('.card').attr('data-aos', 'zoom-in');
