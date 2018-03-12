@@ -6,9 +6,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "babel-core": "latest",
+    "babel-preset-env": "latest",
     "browser-sync": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-babel": "latest",
     "gulp-concat": "latest",
     "gulp-imagemin": "latest",
     "gulp-load-plugins": "latest",
@@ -16,8 +21,12 @@
     "gulp-pug": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
-    "gulp-uglify": "latest"
+    "gulp-uglify-es": "latest"
   },
   "description": "",
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "scrollreveal": "^3.4.0",
+    "smooth-scroll": "^12.1.5"
+  }
 }

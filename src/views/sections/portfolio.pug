@@ -15,7 +15,7 @@ mixin card(title, list, path, online)
       .card__desc: block
       
       footer.card__footer
-        a(href=online, title=title).btn.btn--primary.btn--small #[i.fa.fa-external-link] online
+        a(href=online, title=title).btn.btn--primary.btn--small #[i.fas.fa-external-link-square-alt] online
         
 //- ===
 //- END CARD MIXIN
@@ -26,9 +26,14 @@ section#portfolio.section.section--light: .container
     p.section__desc czyli nad czym pracowałem dotychczas
     
   .cards
-    +card("Restauracje z rabatem", ["Front-end", "Wdrożenie do CMS"], "restauracjezrabatem", "http://restauracjezrabatem.pl/")
+    +card('ELBA (WIP)', ['HTML5 / Pug', 'CSS3 / Sass', 'Javascript / ES6', 'Gulp'], 'elba', 'http://elba.pwojnicz.pl/')
+      | Wdrożenie projektu graficznego; front-end development; psd2html.
+    +card("JavaScript30 (WIP)", ["Javascript / ES6", "CSS3 / Sass", "Design"],
+    "javascript30", "https://codepen.io/collection/ANdmZw/")
+      | Projekty są efektem ubocznym kursu #Javascript30. Zadania starałem się realizować wg swojego zamysłu - zarówno od strony JS jak i tej czysto wizualnej.
+    +card("Restauracje z rabatem", ['HTML5 / Pug', 'CSS3 / Sass', 'Javascript / ES6', 'Gulp', "Integracja z CMS"], "restauracjezrabatem", "http://restauracjezrabatem.pl/")
       | Moim zadaniem było zakodowanie projektu graficznego oraz integracja kodu z systemem CMS serwisu (php). 
-    +card("pwojnicz.pl \'16", ["Design", "Front-end"], "pwojnicz-2016", "https://pwojnicz.pl/online/pwojnicz-2016")
+    +card("pwojnicz.pl \'16", ["Design", "HTML5", 'CSS3 / Sass', 'Gulp'], "pwojnicz-2016", "https://pwojnicz.pl/online/pwojnicz-2016")
       | Poprzednia wersja portfolio.
     +card("Nowy Styl Polska", ["Design", "Front-end"], "nowystylpolska", "https://pwojnicz.pl/online/nowystylpolska")
       | Zakres prac obejmował projekt i kodowanie strony dla ukraińskiego producenta drzwi wewnętrznych.

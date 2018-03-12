@@ -1,87 +1,72 @@
-// ----------------------------------------------------------------------------
+// -------------------------------------------------
 // 1. CONFIG
-// ----------------------------------------------------------------------------
-
-// set app paths
-var path_base = './'
-var paths = {
-  src: {
-    css: path_base + 'src/stylesheets/',
-    js: path_base + 'src/js/',
-    img: path_base + 'src/img/',
-    pug: path_base + 'src/pug/'
-  },
-
-  dest: {
-    css: path_base + 'dist/assets/css/',
-    js: path_base + 'dist/assets/js/',
-    img: path_base + 'dist/assets/img/',
-    pug: path_base + 'dist/'
-  }
-};
+// -------------------------------------------------
 
 // require gulp + plugins magic
-var gulp = require('gulp');
-var gulpLoadPlugins = require('gulp-load-plugins');
-var plugins = gulpLoadPlugins();
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const gulpLoadPlugins = require('gulp-load-plugins');
+const plugins = gulpLoadPlugins();
+const browserSync = require('browser-sync').create();
+const uglify = require('gulp-uglify-es').default;
 
 
-// ----------------------------------------------------------------------------
+// -------------------------------------------------
 // 2. DEFAULT TASKS
-// ----------------------------------------------------------------------------
+// -------------------------------------------------
 
 // browserSync static server
 gulp.task('sync', function() {
   browserSync.init({
-    open: false, server: { baseDir: path_base + '/dist/' }
+    open: false, server: { baseDir: './dist' }
   });
 });
 
 // compile main Sass file
 gulp.task('styles', function() {
-  gulp.src(paths.src.css + 'main.+(sass|scss)')
+  gulp.src('./src/styles/main.+(sass|scss)')
     .pipe(plugins.sass({ outputStyle: 'compressed' })
     .on('error', plugins.sass.logError))
     .pipe(plugins.autoprefixer())
     .pipe(plugins.rename({ suffix:'.min' }))
-    .pipe(gulp.dest(paths.dest.css))
+    .pipe(gulp.dest('./dist/assets/'))
     .pipe(browserSync.stream());
 });
 
 // minify and concat js files
 gulp.task('scripts', function(){
-  return gulp.src(paths.src.js + '**/*.js')
+  return gulp.src('./src/scripts/*.js')
     .pipe(plugins.plumber())
+    .pipe(plugins.babel({ presets: ['env'] }))
     .pipe(plugins.concat('main.min.js'))
-    .pipe(plugins.uglify())
-    .pipe(gulp.dest(paths.dest.js));
+    //.pipe(plugins.rename({ suffix:'.min' }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/assets/'));
 });
 
 // compile templates to HTML
-gulp.task('templates', function buildHTML() {
-  return gulp.src(paths.src.pug + '*.pug')
+gulp.task('views', function buildHTML() {
+  return gulp.src('./src/views/**/[^_]*.pug')
   .pipe(plugins.plumber())
   .pipe(plugins.pug({ pretty: true }))
-  .pipe(gulp.dest(paths.dest.pug))
+  .pipe(gulp.dest('./dist/'))
 });
 
 // watch task
 gulp.task('watch', function() {
-  gulp.watch(paths.src.css + '**/*.+(scss|sass|css)', ['styles']);
-  gulp.watch(paths.src.pug + '**/*.pug', ['templates']);
-  gulp.watch(paths.src.js + '**/*.js', ['scripts'])
+  gulp.watch('./src/styles/**/*.+(scss|sass|css)', ['styles']);
+  gulp.watch('./src/views/**/*.pug', ['views']);
+  gulp.watch('./src/scripts/**/*.js', ['scripts'])
     .on('change', browserSync.reload);
-  gulp.watch(path_base + '**/*.+(html|php)')
+  gulp.watch('./**/*.+(html)')
     .on('change', browserSync.reload);
 });
 
 // minify images
 gulp.task('images', function(){
-  return gulp.src(paths.src.img + '**/*.+(png|jpg|gif|svg|ico)')
+  return gulp.src( './src/images/**/*.+(png|jpg|gif|svg|ico)')
     .pipe(plugins.imagemin())
-    .pipe(gulp.dest(paths.dest.img))
+    .pipe(gulp.dest('./dist/assets/img/'))
 });
 
 // just default task
-gulp.task('default', ['sync', 'styles', 'scripts', 'watch', 'images']);
+gulp.task('default', ['sync', 'styles', 'scripts', 'views', 'watch', 'images']);

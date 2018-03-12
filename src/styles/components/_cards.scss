@@ -79,7 +79,7 @@ $card-margin: 2rem;
 
   &__title {
     color: $c-dark;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   &__list {
@@ -88,6 +88,7 @@ $card-margin: 2rem;
     text-transform: uppercase;
     margin-top: .5rem;
     display: flex;
+    flex-wrap: wrap;
 
     li:not(:last-of-type)::after {
       content: '\2022';
