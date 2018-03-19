@@ -41,14 +41,12 @@ function switchTab() {
   current.classList.remove('is-active');
   this.classList.add('is-active');
 
-  let width = window.innerWidth
+  const width = window.innerWidth
     || document.documentElement.clientWidth
     || document.body.clientWidth;
 
-  if (width < '1200') {
-    this.scrollIntoView({
-      behavior: 'smooth'
-    });
+  if (width <= '1150') {
+    scroll.animateScroll(this);
   }
 }
 
