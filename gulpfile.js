@@ -38,7 +38,6 @@ gulp.task('scripts', function(){
     .pipe(plugins.plumber())
     .pipe(plugins.babel({ presets: ['env'] }))
     .pipe(plugins.concat('main.min.js'))
-    //.pipe(plugins.rename({ suffix:'.min' }))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/assets/'));
 });
@@ -46,9 +45,9 @@ gulp.task('scripts', function(){
 // compile templates to HTML
 gulp.task('views', function buildHTML() {
   return gulp.src('./src/views/**/[^_]*.pug')
-  .pipe(plugins.plumber())
-  .pipe(plugins.pug({ pretty: true }))
-  .pipe(gulp.dest('./dist/'))
+    .pipe(plugins.plumber())
+    .pipe(plugins.pug({ pretty: true }))
+    .pipe(gulp.dest('./dist/'))
 });
 
 // watch task
