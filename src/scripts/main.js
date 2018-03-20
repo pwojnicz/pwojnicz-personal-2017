@@ -1,6 +1,8 @@
-/* --------------------------
--- AOS
--------------------------- */
+const scroll = new SmoothScroll('a[href*="#"]');
+
+// ---
+// On-scroll animations:
+
 window.sr = ScrollReveal({
   scale: 1
 });
@@ -9,15 +11,9 @@ sr.reveal('.hero-section .container > *', 250);
 sr.reveal('.section__header');
 sr.reveal('.card', 250);
 
-/* --------------------------
--- Smooth scrolling
--------------------------- */
-var scroll = new SmoothScroll('a[href*="#"]');
+// ---
+// Main navigation:
 
-
-/* --------------------------
--- Main navigation
--------------------------- */
 const navTrigger = document.querySelector('.main-nav__trigger');
 const navItems = document.querySelectorAll('.main-nav__item');
 
@@ -30,9 +26,9 @@ navTrigger.addEventListener('click', toggleNav);
 navItems.forEach(navItem => navItem.addEventListener('click', toggleNav));
 
 
-/* --------------------------
--- Tabs
--------------------------- */
+// ---
+// Tabs:
+
 const tabs = document.querySelectorAll('.tab-header');
 
 function switchTab() {
