@@ -1,7 +1,7 @@
 @import 'abstracts/variables';
 
-@import 'vendors/include-media';
-@import 'vendors/reset';
+@import 'include-media/dist/include-media';
+@import 'reset-css/sass/reset';
 
 @import 'base/base';
 @import 'base/typography';
@@ -11,6 +11,7 @@
 @import 'layout/footer';
 @import 'layout/sections';
 
+@import 'components/alerts';
 @import 'components/buttons';
 @import 'components/cards';
 @import 'components/tabs';
