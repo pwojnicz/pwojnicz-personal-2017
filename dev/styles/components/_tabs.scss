@@ -31,11 +31,10 @@
     }
 
     &__icon {
-      margin-right: 2em;
-
-      svg {
-        fill: #fff;
-      }
+      fill: #fff;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: 2rem;
     }
 
     &__title {
@@ -94,7 +93,7 @@
         animation: text-fade .5s;
       }
 
-      .tab-header__icon svg {
+      .tab-header__icon {
         fill: $c-primary-text-1;
       }
 
