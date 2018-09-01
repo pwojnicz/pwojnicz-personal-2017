@@ -28,6 +28,10 @@ a {
   color: #2F80ED;
   text-decoration: none;
 
+  &:focus {
+    outline: 1px dashed rgba($c-action, 0.6);
+  }
+
   &:not([class]) {
     position: relative;
     backface-visibility: hidden;
@@ -45,7 +49,8 @@ a {
       width: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $c-primary;
 
       &:after {

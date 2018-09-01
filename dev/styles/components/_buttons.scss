@@ -21,9 +21,15 @@
     padding: 1rem 1.5rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: darken($c-light, 5%);
     border-radius: 0;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgba($c-light, 0.3);
   }
 
   &:not(:last-child) {
@@ -34,8 +40,13 @@
     color: #fff;
     background: $c-action;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: lighten($c-action, 5%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($c-action, 0.6);
     }
   }
 
@@ -43,8 +54,13 @@
     color: #fff;
     background: $c-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: lighten($c-dark, 5%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($c-dark, 0.6);
     }
   }
 
