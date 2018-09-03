@@ -3,15 +3,15 @@ section#skills.section.section--dark: .container
     h1.section__title „Can you fly that thing?”
     p.section__desc oferta i umiejętności
     
-  section.tabs
-    .tab-header.is-active
+  section.tabs(role="tablist")
+    a.tab-header.is-active(href="#front-end", role="tab")
       .tab-header__label.tab-header__label--featured specjalizacja
       .tab-header__name
         svg.tab-header__icon: use(href="assets/img/sprite.svg#front-end")
         h2.tab-header__title Front-end development
       .tab-header__desc Kodowanie na podstawie projektu graficznego, responsywność, optymalizacja SEO, wdrożenia CMS.
     
-    article.tab-content
+    article.tab-content#front-end(role="tabpanel")
       .tab-content__section
         h3.tab-content__header HTML i CSS
         ul.u-list
@@ -38,14 +38,14 @@ section#skills.section.section--dark: .container
           li.u-list__item XML, XSLT
     //- TAB END
       
-    .tab-header
+    a.tab-header(href="#back-end", role="tab")
       .tab-header__label podstawy
       .tab-header__name
         svg.tab-header__icon: use(href="assets/img/sprite.svg#back-end")
         h2.tab-header__title Back-end development
       .tab-header__desc Znajomość podstaw programowania obiektowego oraz doświadczenie z&nbsp;relacyjnymi bazami danych.
     
-    article.tab-content
+    article.tab-content#back-end(role="tabpanel")
       .tab-content__section
         h3.tab-content__header Programowanie
         ul.u-list
@@ -61,14 +61,14 @@ section#skills.section.section--dark: .container
           li.u-list__item Doświadczenie z relacyjnymi bazami danych
     //- TAB END
   
-    .tab-header
+    a.tab-header(href="#design", role="tab")
       .tab-header__label podstawy
       .tab-header__name
         svg.tab-header__icon: use(href="assets/img/sprite.svg#design")
         h2.tab-header__title WEB/UI/UX design
       .tab-header__desc Wyczucie estetyki, znajomość trendów i&nbsp;technik projektowania interfejsów pod www.
     
-    article.tab-content       
+    article.tab-content#design(role="tabpanel")
       .tab-content__section.tab-content__section--wider
         h3.tab-content__header Doświadczenie
         p Dodatkowe hobby – projektowanie UI to dla mnie fajne i&nbsp;przyjemne wyzwanie. Posiadam podstawową wiedzę nt. UX i&nbsp;projektuję z&nbsp;myślą o&nbsp;użytkowników końcowym, dbając o&nbsp;odpowiedni priorytet treści, przejrzystość i wygodę.
@@ -82,14 +82,14 @@ section#skills.section.section--dark: .container
           li.u-list__item Zeszyt + ołówek :)
     //- TAB END
   
-    .tab-header
+    a.tab-header(href="#tools", role="tab")
       .tab-header__label inne
       .tab-header__name
         svg.tab-header__icon: use(href="assets/img/sprite.svg#tools")
         h2.tab-header__title Inne / narzędzia
       .tab-header__desc Narzędzia i inne technologie, z&nbsp;którymi miałem styczność.
     
-    article.tab-content
+    article.tab-content#tools(role="tabpanel")
       .tab-content__section
         h3.tab-content__header GNU/Linux
         ul.u-list

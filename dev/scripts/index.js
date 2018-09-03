@@ -34,7 +34,8 @@ navItems.forEach(navItem => navItem.addEventListener('click', toggleNav))
 
 const tabs = document.querySelectorAll('.tab-header')
 
-function switchTab() {
+function switchTab(e) {
+  e.preventDefault()
   const current = document.querySelector('.tab-header.is-active')
 
   current.classList.remove('is-active')
@@ -50,3 +51,4 @@ function switchTab() {
 }
 
 tabs.forEach(tab => tab.addEventListener('click', switchTab))
+tabs.forEach(tab => tab.href = '')

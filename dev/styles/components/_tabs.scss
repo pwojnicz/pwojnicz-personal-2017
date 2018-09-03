@@ -12,16 +12,26 @@
 
 .tab {
   &-header {
+    font-weight: normal;
     background: lighten($c-darker, 2%);
+    border: 0;
+    outline: 0;
     box-shadow: $box-shadow;
     padding: 2rem;
+    margin: 0;
     display: block;
     position: relative;
     transition: all .2s ease-in;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: lighten($c-dark, 5%);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($c-dark, 0.6);
+      outline: 0;
     }
 
     &__name {
@@ -74,6 +84,7 @@
       position: relative;
       transform: translateY(1em);
       z-index: 1;
+      box-shadow: none;
 
       &::after {
         content: '';
